@@ -2,3 +2,4 @@ name1=jasmitha
 name2=Sanj
 GIT_URL = https://github.com/safirh/petclinic.git
 BRANCH = master
+key = value
