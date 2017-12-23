@@ -4,3 +4,4 @@ GIT_URL = https://github.com/safirh/petclinic.git
 BRANCH = master
 key = value
 Build_number = 11
+Build_number = 12
