@@ -12,9 +12,8 @@ class Hello implements Serializable {
   
   void wish()
   {
-	this.script.stage('wish'){
-		name=this.config.name
-		this.script.sh('echo $name' )
+	this.script.stage('wish')
+		this.script.sh('echo this.config.name' )
 	}	
   }
 
