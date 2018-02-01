@@ -13,7 +13,7 @@ class Hello implements Serializable {
   void wish()
   {
 	this.script.stage('wish'){
-		print "Hello"
+		print "Hello" + this.config.name
 	}	
   }
 
