@@ -13,7 +13,7 @@ class Hello implements Serializable {
   void wish()
   {
 	this.script.stage('wish'){
-		this.scrpt.sh(echo "Hello")
+		this.script.sh(echo "Hello")
 	}	
   }
 
