@@ -7,7 +7,7 @@ def call(body) {
 
     node {
 	stage('stage-1'){
-		echo "Hello %{config.name}"
+		echo "Hello "
 	}
     }
 }
