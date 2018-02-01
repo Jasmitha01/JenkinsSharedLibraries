@@ -1,4 +1,4 @@
-ipackage org.mine.first
+package org.mine.first
 import org.mine.*
 
 class Hello implements Serializable {
