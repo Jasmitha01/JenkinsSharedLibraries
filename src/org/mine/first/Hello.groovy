@@ -1,5 +1,4 @@
 package org.mine.first
-import org.mine.*
 
 class Hello implements Serializable {
   def config
@@ -13,8 +12,8 @@ class Hello implements Serializable {
   
   void wish()
   {
-	this.script.stage('wish'){
-		print "Hello"
+	  this.script.stage('wish'){
+		this.script.sh('echo Hello ' + this.config.name)
 	}	
   }
 
