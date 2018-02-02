@@ -14,7 +14,8 @@ class KeyValue {
 	this.script.stage('KeyValue'){
 		def defaultconfigtxt = this.script.libraryResource this.config.resource
 		def defaultconfig = this.script.readProperties text: defaultconfigtxt
-		return defaultconfig.this.config.key
-   	}	
+		def key=this.config.key
+		return defaultconfig.key
+  	}	
    }
 }
