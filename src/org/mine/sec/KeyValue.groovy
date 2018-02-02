@@ -16,7 +16,7 @@ class KeyValue {
 		def defaultconfig = this.script.readProperties text: defaultconfigtxt
 		def key=this.config.key
 		this.script.sh('echo key - '+key)
-		return defaultconfig.${key}
+		return defaultconfig.get(${key})
   	}	
    }
 }
