@@ -14,9 +14,9 @@ class Hello implements Serializable {
   void wish()
   {
 	this.script.stage('wish'){
-		def defaultconfigtxt = libraryResource 'values.json'
+		def defaultconfigtxt = libraryResource+this.config.resource
 		def defaultconfig = readProperties text: defaultconfigtxt
-		echo defaultconfig.name
+		return defaultconfig.name1
 	}	
   }
 
