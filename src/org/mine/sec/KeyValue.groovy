@@ -12,7 +12,7 @@ class KeyValue {
   
   void returnKey(){
 	this.script.stage('KeyValue'){
-		def defaultconfigtxt = libraryResource+this.config.resource
+		def defaultconfigtxt = this.script.libraryResource this.config.resource
 		def defaultconfig = readProperties text: defaultconfigtxt
 		return defaultconfig.name1
    }	
