@@ -1,19 +1,19 @@
 package org.mine.first
 import org.mine.*
 
-class Hello implements Serializable {
+class KeyValue {
   def config
   def script
 
-  Hello(script,config) {
+  KeyValue(script,config) {
     this.config = config
     this.script = script
   }
 
   
-  void wish()
+  void returnKey()
   {
-	this.script.stage('wish'){
+	this.script.stage('keyValue'){
 		def defaultconfigtxt = libraryResource+this.config.resource
 		def defaultconfig = readProperties text: defaultconfigtxt
 		return defaultconfig.name1
