@@ -15,6 +15,6 @@ class KeyValue {
 		def defaultconfigtxt = this.script.libraryResource this.config.resource
 		def defaultconfig = this.script.readProperties text: defaultconfigtxt
 		return defaultconfig.name1
-   }	
-  }
+   	}	
+   }
 }
