@@ -21,7 +21,7 @@ def call(body) {
            }
                  
           stage('Push'){
-              sh('git push origin '+config.branch)
+              sh('git push '+config.origin+' '+config.branch)
            }
     }
 
