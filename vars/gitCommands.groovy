@@ -7,7 +7,7 @@ def call(body) {
 
     node{
            stage('Checkout') {
-              git(url: config.url, branch: config.branch, credentialsId: config.cid)
+              git(url: config.url1+config.url2, branch: config.branch, credentialsId: config.cid)
            }
         
            stage('Create temp file') {
@@ -21,7 +21,7 @@ def call(body) {
            }
                  
           stage('Push'){
-              sh('git push '+config.origin+' '+config.branch)
+              sh('git push '+config.url1+config.git_user+':'+'$GIT'+config.url2+' '+config.branch)
            }
     }
 
