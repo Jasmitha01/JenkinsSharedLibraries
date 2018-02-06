@@ -16,12 +16,12 @@ def call(body) {
            }
          
           stage('Commit'){
-              sh('git add .")
+              sh('git add .')
               sh('git commit -m "adding the file "' + config.file)
            }
                  
           stage('Push'){
-              sh("git push origin "+config.branch)
+              sh('git push origin '+config.branch)
            }
     }
 
