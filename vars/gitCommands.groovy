@@ -7,7 +7,7 @@ def call(body) {
 
     node{
            stage('checkout') {
-               git([url: 'https://github.com/JasmithaMeka/JenkinsSharedLibraries.git', branch: 'master'])
+              git(url: config.url, branch: config.branch, credentialsId: config.cid)
            }
     }
 
