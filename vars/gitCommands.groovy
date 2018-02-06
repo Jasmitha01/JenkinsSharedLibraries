@@ -9,6 +9,9 @@ def call(body) {
            stage('checkout') {
               git(url: config.url, branch: config.branch, credentialsId: config.cid)
            }
+            stage('checkout') {
+              sh('echo $env.WORKSPACE')
+           }
     }
 
 }
