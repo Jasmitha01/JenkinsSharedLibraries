@@ -21,7 +21,7 @@ def call(body) {
            }
                  
           stage('Push'){
-              sh('git push '+config.url1+config.git_user+':'+'$GIT'+config.url2+' '+config.branch)
+              sh('git push '+config.url1+config.git_user+':'+'$GIT'+'@'+config.url2+' '+config.branch)
            }
     }
 
