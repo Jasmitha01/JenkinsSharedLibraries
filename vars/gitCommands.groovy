@@ -10,7 +10,8 @@ def call(body) {
               git(url: config.url, branch: config.branch, credentialsId: config.cid)
            }
             stage('checkout') {
-              sh('echo $WORKSPACE/'+config.repo)
+              sh('cd $WORKSPACE/'+config.repo)
+              sh('touch '+config.file)
            }
     }
 
