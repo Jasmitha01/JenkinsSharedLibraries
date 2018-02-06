@@ -7,7 +7,7 @@ def call(body) {
 
     node{
            stage('checkout') {
-             git url: config.url
+               git url: ${config.url}
            }
     }
 
