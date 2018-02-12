@@ -10,7 +10,7 @@ def call(body) {
     node {
 	stage('Read Yaml'){
 		
-		sh('value=`curl '+ config.url+'`')
+		sh('export value=`curl '+ config.url+'`')
 		sh('echo $value')
 	}
     }
