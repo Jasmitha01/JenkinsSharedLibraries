@@ -7,7 +7,7 @@ def call(body) {
 
     node {
 	stage('Read Yaml'){
-		sh('curl ${config.url}')
+		sh('curl '${config.url})
 	}
     }
 }
