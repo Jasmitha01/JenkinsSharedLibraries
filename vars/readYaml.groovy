@@ -5,13 +5,13 @@ def call(body) {
     body.delegate = config
     body()
 	
-    def value
+  
 	
     node {
 	stage('Read Yaml'){
 		
-		sh('export value=`curl '+ config.url+'`')
-		sh('echo $value')
+		sh('value=`curl '+ config.url+'`'+'&& echo $value')
+	
 	}
     }
 }
