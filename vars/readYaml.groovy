@@ -4,10 +4,12 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()
-
+	
+    def value
+	
     node {
 	stage('Read Yaml'){
-		def value
+		
 		sh('value=`curl '+ config.url+'`')
 		sh('echo $value')
 	}
