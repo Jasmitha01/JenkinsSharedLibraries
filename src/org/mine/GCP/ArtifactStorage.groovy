@@ -40,7 +40,7 @@ def upload() {
 
 	 def baseUrl="https://www.googleapis.com"
    def imageType = 'application/java-archive'
-   def imgFile = new File("/tmp/workspace/new/target/spring-boot-rest-example-0.5.0.war")
+   def imgFile = new File("/root/jenkins.war")
        // assert imgFile.exists()
 	//def files = this.script.findFiles(glob: 'target/*.war')
 	//this.script.echo "${files[0].name}+${files[0].path} "
