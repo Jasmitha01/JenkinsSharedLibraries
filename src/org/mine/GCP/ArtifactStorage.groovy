@@ -19,6 +19,7 @@ import org.apache.http.entity.mime.content.FileBody;
 import groovyx.net.http.*
 import static groovyx.net.http.Method.POST
 
+@NonCPS 
 class ArtifactStorage implements Serializable {
   
   def config
