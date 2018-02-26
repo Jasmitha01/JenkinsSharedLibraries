@@ -19,7 +19,7 @@ import org.apache.http.entity.mime.content.FileBody;
 import groovyx.net.http.*
 import static groovyx.net.http.Method.POST
 
-@NonCPS 
+
 class ArtifactStorage implements Serializable {
   
   def config
@@ -31,7 +31,7 @@ class ArtifactStorage implements Serializable {
   }
 
 
- 
+ @NonCPS 
 def upload() {
     this.script.stage('Upload Artifcat') {
 	if(this.config.storage=='Bucket')
