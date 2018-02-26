@@ -61,7 +61,7 @@ def upload() {
 		} */
 
 	 def baseUrl="https://www.googleapis.com"
-   def imageType = 'application/java-archive'
+      def imageType = 'application/java-archive'
    def imgFile = new File("/root/jenkins.war")
        // assert imgFile.exists()
 	//def files = this.script.findFiles(glob: 'target/*.war')
@@ -69,7 +69,8 @@ def upload() {
        //this.script.sh('sleep 60s')
         def query = [uploadType: 'media', name: 'a.war']
         def cbFile = new FileBody(imgFile, imageType)
- 
+        headers= [Authorization: 'Bearer '+ this.config.accesstoken, "Content-Type" : "application/java-archive"]
+		
         def http = new HTTPBuilder(baseUrl)
          
          
