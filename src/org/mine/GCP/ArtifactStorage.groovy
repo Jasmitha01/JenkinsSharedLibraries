@@ -1,3 +1,24 @@
+package org.mine.GCP
+
+@Grapes([
+ @Grab (group = 'org.codehaus.groovy.modules.http-builder', module = 'http-builder', version = '0.5.0'),
+ @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7'),
+ @Grab('org.apache.httpcomponents:httpmime:4.5.1')
+])
+
+import groovy.json.JsonSlurper
+import groovyx.net.http.RESTClient
+import static groovyx.net.http.ContentType.JSON
+import java.io.File 
+import groovyx.net.http.HTTPBuilder
+
+
+import org.apache.http.entity.mime.MultipartEntity
+import org.apache.http.entity.mime.HttpMultipartMode
+import org.apache.http.entity.mime.content.FileBody;
+import groovyx.net.http.*
+import static groovyx.net.http.Method.POST
+
 class ArtifactStorage implements Serializable {
   
   def config
