@@ -69,15 +69,15 @@ def upload() {
        //this.script.sh('sleep 60s')
         def query = [uploadType: 'media', name: 'a.war']
         def cbFile = new FileBody(imgFile, imageType)
-        headers= [Authorization: 'Bearer '+ this.config.accesstoken, "Content-Type" : "application/java-archive"]
-		
+        	
         def http = new HTTPBuilder(baseUrl)
          
          
         resp = http.request(POST) { req ->
             uri.path = 'upload/storage/v1/b/jas-1893/o'
             uri.query = query
-
+            headers= [Authorization: 'Bearer '+ this.config.accesstoken, "Content-Type" : "application/java-archive"]
+	
             def mpEntity = new MultipartEntity()
             mpEntity.addPart("war", cbFile)
              
