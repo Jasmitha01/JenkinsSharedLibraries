@@ -21,7 +21,7 @@ def upload() {
     this.script.stage('Upload Artifcat') {
         if(this.config.storage=='Bucket')
         {
-            def req = OkHttpBuilder.configure {
+            def req = HttpBuilder.configure {
                   request.uri = 'https://www.googleapis.com'
                   request.headers['Authorization'] = 'Bearer ya29.Glt3BScZb6AsWKOXDoXqoAegey4M-8_OFZP7ddMWyxNg-IIDlCIeWZBLUHnWvc--Rl3wL-xQNOXwmhSqobJ5bcX1P9GKEkH69fD6_OFKJoiiaR7dkABXlayMJP6m'
                   request.headers['Content-Typer'] = 'application/java-archive'
@@ -34,7 +34,7 @@ def upload() {
                       field 'name', 'This is my file'
                       part 'file', '/tmp/workspace/gcp/target/spring-boot-rest-example-0.5.0.war', 'application/java-archive'
                   }
-                  request.encoder 'multipart/form-data', OkHttpEncoders.&multipart
+                  request.encoder 'multipart/form-data', HttpEncoders.&multipart
               }
          }
     }
