@@ -23,7 +23,7 @@ def upload() {
     this.script.stage('Upload Artifcat') {
         if(this.config.storage=='Bucket')
         {
-            def request = OkHttpBuilder.configure {
+            def req = OkHttpBuilder.configure {
                   request.uri = 'https://www.googleapis.com’
                   request.headers['Authorization'] = 'Bearer ya29.Glt3BScZb6AsWKOXDoXqoAegey4M-8_OFZP7ddMWyxNg-IIDlCIeWZBLUHnWvc--Rl3wL-xQNOXwmhSqobJ5bcX1P9GKEkH69fD6_OFKJoiiaR7dkABXlayMJP6m'
                   request.headers['Content-Typer'] = 'application/java-archive'
