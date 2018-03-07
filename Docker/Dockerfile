@@ -1,4 +1,5 @@
 FROM primetoninc/jdk:1.8
+ARG BUILD_NUMBER
 USER root 
 RUN curl -o /opt/spring-boot-rest-example-0.5.0.war -u admin:admin123 http://nexus-daac-nexus.apps.openshiftpoc.online/repository/test/$BUILD_NUMBER.war
 EXPOSE 8080 
