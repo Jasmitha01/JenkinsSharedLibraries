@@ -6,7 +6,7 @@ import groovyx.net.http.HttpBuilder
 import groovyx.net.http.*
 import static groovyx.net.http.MultipartContent.multipart
 
-
+@NonCPS
 class Artifact implements Serializable {
   
   def config
@@ -32,7 +32,7 @@ def upload() {
                   request.body = multipart {
 
                       field 'name', 'This is my file'
-                      part 'file', '/tmp/workspace/gcp/target/spring-boot-rest-example-0.5.0.war', 'application/java-archive'
+                        part 'file', '/tmp/workspace/gcp/target/spring-boot-rest-example-0.5.0.war', 'application/java-archive'
                   }
                   request.encoder 'multipart/form-data', HttpEncoders.&multipart
               }
