@@ -2,7 +2,7 @@ package org.mine.GCP
 
 @Grab('io.github.http-builder-ng:http-builder-ng-core:1.0.3')
 
-import groovyx.net.http.OkHttpBuilder
+import groovyx.net.http.HttpBuilder
 import groovyx.net.http.*
 import static groovyx.net.http.MultipartContent.multipart
 
