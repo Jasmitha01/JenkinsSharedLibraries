@@ -34,7 +34,7 @@ def upload() {
                   request.body = multipart {
 
                       field 'name', 'This is my file'
-                      part 'file', ’/tmp/workspace/gcp/target/spring-boot-rest-example-0.5.0.war, 'application/java-archive'
+                      part 'file', '/tmp/workspace/gcp/target/spring-boot-rest-example-0.5.0.war', 'application/java-archive'
                   }
                   request.encoder 'multipart/form-data', OkHttpEncoders.&multipart
               }
