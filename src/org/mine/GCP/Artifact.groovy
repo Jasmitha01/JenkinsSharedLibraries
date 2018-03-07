@@ -24,12 +24,12 @@ def upload() {
         if(this.config.storage=='Bucket')
         {
             def req = OkHttpBuilder.configure {
-                  request.uri = 'https://www.googleapis.com’
+                  request.uri = 'https://www.googleapis.com'
                   request.headers['Authorization'] = 'Bearer ya29.Glt3BScZb6AsWKOXDoXqoAegey4M-8_OFZP7ddMWyxNg-IIDlCIeWZBLUHnWvc--Rl3wL-xQNOXwmhSqobJ5bcX1P9GKEkH69fD6_OFKJoiiaR7dkABXlayMJP6m'
                   request.headers['Content-Typer'] = 'application/java-archive'
               }.post {
                   request.uri.path = '/upload/storage/v1/b/jas-1893/o'
-                  request.uri.query = [uploadType: 'media’,name:’final.war’]
+                  request.uri.query = [uploadType: 'media',name:'final.war']
                   request.contentType = 'multipart/form-data'
                   request.body = multipart {
 
