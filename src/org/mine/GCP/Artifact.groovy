@@ -17,8 +17,6 @@ class Artifact implements Serializable {
     this.script = script
   }
 
-
- @NonCPS 
 def upload() {
     this.script.stage('Upload Artifcat') {
         if(this.config.storage=='Bucket')
@@ -38,8 +36,6 @@ def upload() {
                   }
                   request.encoder 'multipart/form-data', OkHttpEncoders.&multipart
               }
-
-
          }
     }
 }
