@@ -1,7 +1,10 @@
 FROM primetoninc/jdk:1.8
-ARG BUILD_NUMBER
-USER root 
-RUN curl -o /opt/spring-boot-rest-example-0.5.0.war -u admin:admin123 http://nexus-daac-nexus.apps.openshiftpoc.online/repository/test/$BUILD_NUMBER.war
+ARG ARTIFACT_URL 
+ARG ARTIFACT_FILE
+ARG APPLICATION_NAME
+ARG ARTIFACTS_TYPE
+
+USER root
+RUN curl -o /opt/$APPLICATION_NAME.$ARTIFACTS_TYPE -u admin:admin123  $ARTIFACT_URL/$ARTIFACT_FILE
 EXPOSE 8080 
 USER 1001
-ENTRYPOINT [ "java", "-jar", "-Dspring.profiles.active=test", "/opt/spring-boot-rest-example-0.5.0.war" ]
