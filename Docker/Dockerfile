@@ -12,8 +12,9 @@ RUN mkdir -p /app && \
     mkdir -p /env && \
     chmod 755 -R /env && \
     mkdir -p /secrets && \
-    chmod 755 -R /secrets && \
-    curl -o /opt/$APPLICATION_NAME.$ARTIFACTS_TYPE -u admin:admin123  $ARTIFACT_URL/$ARTIFACT_FILE
+    chmod 755 -R /secrets 
+    
+RUN  curl -o /opt/$APPLICATION_NAME.$ARTIFACTS_TYPE -u admin:admin123  $ARTIFACT_URL/$ARTIFACT_FILE
     
 EXPOSE 8080 
 
